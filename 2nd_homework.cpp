@@ -11,12 +11,17 @@ int main()
     
     week = num+num2-1;
     if(week % 7 == 0 && num2 == 1) week = week/7;
-    	else{
-    		week = week/7+1;
-    		for(int i = 0 ; i < num2 - 1 ; i++){
+    	
+	else{
+   		week = week/7+1;
+	}
+	
+	if(num2 != 1){
+		for(int i = 0 ; i < num2 - 1 ; i++){
     		cout << "    ";
-		}
-	} 
+    	}
+	}
+	
 	//cout << week;
     
     int day = 8-num2;
@@ -37,9 +42,9 @@ int main()
 				//cout<<j;
 			}
 			count++;
-			if(count > num)break;
 		}
 		day = 7;
+		if(count > num)break;
 		cout<<endl;
 	}
     

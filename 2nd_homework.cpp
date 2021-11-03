@@ -1,37 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
+int main(){
 	int num, num2;
 	int week;
-    cout << "Enter the number of days in the month: ";
-    cin >> num;
-    cout << "Enter the first day of the week (1 for Sun, 7 for Sat): ";
-    cin >> num2;
+	cout << "Enter the number of days in the month: ";
+	cin >> num;
+	cout << "Enter the first day of the week (1 for Sun, 7 for Sat): ";
+	cin >> num2;
     
-    week = num+num2-1;
-    if(week % 7 == 0 && num2 == 1) week = week/7;
-    	
+    	week = num+num2-1;
+   	if(week % 7 == 0 && num2 == 1) week = week/7;
 	else{
    		week = week/7+1;
 	}
 	
 	if(num2 != 1){
 		for(int i = 0 ; i < num2 - 1 ; i++){
-    		cout << "    ";
-    	}
+    			cout << "    ";
+    		}
 	}
 	
-	//cout << week;
+    	int day = 8-num2;
+    	int count = 1;
     
-    int day = 8-num2;
-    int count = 1;
-    
-    for(int i = 0 ; i < week ; i++){
-    	for(int j = 0 ; j < day ; j++){
-    		if(count > num)break;
-    		if(count < 10){
-    			cout << " " <<count;
+    	for(int i = 0 ; i < week ; i++){
+    		for(int j = 0 ; j < day ; j++){
+    			if(count > num)break;
+    			if(count < 10){
+    				cout << " " <<count;
 			}
 			else{
 				cout << count;
@@ -47,6 +43,5 @@ int main()
 		if(count > num)break;
 		cout<<endl;
 	}
-    
     return 0;
 }

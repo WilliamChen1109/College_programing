@@ -11,19 +11,24 @@ int main(){
 	int count = 0;
 	
 	for(int i = 0 ; i < data.length() ; i++){
-		if(arr[i] == '0'){
-			cout<<"Fine ";
+		if(arr[i] == '1' && arr[i+1] == '1'){
+			cout<<"A";
+			i+=1;
 		} 
 		else if(arr[i] == '1' && arr[i+1] == '0'){
-			cout << "Cloudy ";
+			cout << "B";
 			i+=1;
 		}
-		else if(arr[i] == '1' && arr[i+1] == '1' && arr[i+2] == '0'){
-			cout << "Rainy ";
+		else if(arr[i] == '0' && arr[i+1] == '1'){
+			cout << "C";
+			i+=1;
+		}
+		else if(arr[i] == '0' && arr[i+1] == '0' && arr[i+2] == '1'){
+			cout << "D";
 			i+=2;
 		}
-		else if(arr[i] == '1' && arr[i+1] == '1' && arr[i+2] == '1'){
-			cout <<"Snow ";
+		else if(arr[i] == '0' && arr[i+1] == '0' && arr[i+2] == '0'){
+			cout <<"E";
 			i+=2;
 		}
 	}
